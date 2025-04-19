@@ -7,7 +7,7 @@ export default async function Slider() {
                   <div id="carouselExampleCaptions" className="carousel slide">
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src={res.slides[0].imageAnime} className="d-block w-100" alt={res.slides[0].id} />
+                  <img src={res.slides[0].imageAnime} className="d-block w-100" alt={res.slides[0].animeId} />
                   <div className="container" id="slide-data" > 
                   <div id="slide-release" >{res.slides[0].release}</div>  
                     <div id="spot-quality"> 
@@ -24,7 +24,7 @@ export default async function Slider() {
                   </div>
                 </div>
                 <div className="carousel-item">
-                   <img src={res.slides[1].imageAnime} className="d-block w-100" alt={res.slides[1].id} />
+                   <img src={res.slides[1].imageAnime} className="d-block w-100" alt={res.slides[1].animeId} />
                   <div className="container" id="slide-data" > 
                   <div id="slide-release" >{res.slides[1].release}</div>  
                     <div id="spot-quality"> 
@@ -41,7 +41,7 @@ export default async function Slider() {
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[2].imageAnime} className="d-block w-100" alt={res.slides[2].id} />
+                <img src={res.slides[2].imageAnime} className="d-block w-100" alt={res.slides[2].animeId} />
                   <div className="container" id="slide-data" > 
                   <div id="slide-release" >{res.slides[2].release}</div>  
                     <div id="spot-quality"> 
@@ -58,7 +58,7 @@ export default async function Slider() {
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[3].imageAnime} className="d-block w-100" alt={res.slides[3].id} />
+                <img src={res.slides[3].imageAnime} className="d-block w-100" alt={res.slides[3].animeId} />
                   <div className="container" id="slide-data" > 
                   <div id="slide-release" >{res.slides[3].release}</div>  
                     <div id="spot-quality"> 
@@ -75,7 +75,7 @@ export default async function Slider() {
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[4].imageAnime} className="d-block w-100" alt={res.slides[4].id} />
+                <img src={res.slides[4].imageAnime} className="d-block w-100" alt={res.slides[4].animeId} />
                   <div className="container" id="slide-data" > 
                   <div id="slide-release" >{res.slides[4].release}</div>  
                     <div id="spot-quality"> 
@@ -92,7 +92,7 @@ export default async function Slider() {
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[5].imageAnime} className="d-block w-100" alt={res.slides[5].id} />
+                <img src={res.slides[5].imageAnime} className="d-block w-100" alt={res.slides[5].animeId} />
                   <div className="container" id="slide-data" > 
                   <div id="slide-release" >{res.slides[5].release}</div>  
                     <div id="spot-quality"> 
@@ -109,7 +109,7 @@ export default async function Slider() {
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[6].imageAnime} className="d-block w-100" alt={res.slides[6].id} />
+                <img src={res.slides[6].imageAnime} className="d-block w-100" alt={res.slides[6].animeId} />
                   <div className="container" id="slide-data" > 
                   <div id="slide-release" >{res.slides[6].release}</div>  
                     <div id="spot-quality"> 
@@ -126,7 +126,7 @@ export default async function Slider() {
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[7].imageAnime} className="d-block w-100" alt={res.slides[7].id} />
+                <img src={res.slides[7].imageAnime} className="d-block w-100" alt={res.slides[7].animeId} />
                   <div className="container" id="slide-data" > 
                   <div id="slide-release" >{res.slides[7].release}</div>  
                     <div id="spot-quality"> 

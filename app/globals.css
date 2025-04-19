@@ -232,3 +232,69 @@ input:-webkit-autofill{
   flex-direction: column;
   gap:10px;
 }
+#libraury-border{
+  height:auto;
+  width:auto;
+  padding:10px;
+  background:black;
+}
+#libraury-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:max-content;
+  color:white;
+  height:35px;
+  margin: 10px;
+  padding:10px;
+}
+#container{
+  overflow: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+  gap:20px;
+}
+#card{
+  display: inline-block;
+  width:200px;
+  border-radius:10px;
+  margin:10px;
+  height:300px;
+  position: relative;
+}
+#card-image{
+  height:100%;
+  width:100%;
+  border-radius:10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#card-title{
+  position:absolute;
+  border-radius:10px;
+  height:100%;
+  width:100%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  top: 0%;
+  left: 0%;
+  color: white;
+}
+#card-rank{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-bottom-right-radius:10px;
+  margin:10px;
+  background-color: red;
+  padding:5px;
+  color:white;
+}
+#trend-title{
+  position: absolute;
+  padding:10px;
+  font-family: Arial, Helvetica, sans-serif;
+  bottom:0%;
+  display: flex;
+  justify-content: center;
+  white-space: pre-line;
+}
