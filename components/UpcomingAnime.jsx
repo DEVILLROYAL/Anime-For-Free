@@ -14,7 +14,7 @@ export default async function UpcomingAnime(props) {
         <h4>Upcoming Animes</h4>
         </div>
         <div id="container">
-          {upanime.map((index)=>{return( <Card key={index.idani} image={index.imgAnime} name={index.name} rank={index.format} /> )})}
+          {upanime.map((item,index)=>{return( <Card key={`${item.idani}-${index}`} image={item.imgAnime} name={item.name} rank={item.format} /> )})}
         </div>
         </div>
     </>

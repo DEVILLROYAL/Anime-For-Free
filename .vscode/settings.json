@@ -1,0 +1,7 @@
+{
+    "chat.agent.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "chat.detectParticipant.enabled": true,
+    "chat.extensionTools.enabled": false,
+    "chat.unifiedChatView": false
+}

@@ -1,21 +1,20 @@
 'use client'
 import {useState} from "react";
+import { useRouter } from "next/navigation"
 import Search from "./Search";
 
 export default function SearchScript() {
 
-  const [quary, setQuary] = useState();
-  const [page, setPage] = useState(1);
+  const router = useRouter();
+  const [quary, setQuary] = useState("");
 
-  const handleSearchClick = async () => {
-    const url = `https://aniwatch-api-v1-0.onrender.com/api/search/${quary}/${page}`;
-    const data = await fetch(url);
-    let res = data.json();
+  const handleSearchClick = async (slug) => {
+    router.push(`/search/${slug}`);
   }; 
 
   return (
     <>
-        <Search onClick={handleSearchClick} onChange={e => setQuary(e.target.value)} value={quary} />
+        <Search onClick={() => handleSearchClick(quary)} onChange={e => setQuary(e.target.value)} value={quary} />
     </>   
   )
 }
