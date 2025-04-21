@@ -12,7 +12,7 @@ return(
       <>
           <div id="search-result-control">
             <div className="container" id="search-result">
-              {searchData.map((item, index)=>{ return ( <SearchComponent key={item.idanime} name={item.name} image={item.img} format={item.format} pg={item.pg} /> )})}
+              {searchData.map((item, index)=>{ return ( <SearchComponent key={item.idanime} name={item.name} id={item.idanime} image={item.img} format={item.format} pg={item.pg} /> )})}
               </div>
            </div>
       </>

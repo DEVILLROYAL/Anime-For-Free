@@ -284,11 +284,12 @@ input:-webkit-autofill{
   position: absolute;
   top: 0%;
   left: 0%;
-  border-bottom-right-radius:10px;
+  background-image: linear-gradient(to right, purple , red);
   margin:10px;
-  background-color: red;
-  padding:5px;
   color:white;
+  font-size:small;
+  padding:5px;
+  border-bottom-right-radius:10px;
 }
 #trend-title{
   position: absolute;
@@ -338,5 +339,21 @@ input:-webkit-autofill{
 }
 #search-result{
   padding:0;
+}
+#GenreBorder{
+  height:auto;
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#genre-col{
+  background:black;
+  color:white;
+  padding:5px;
+  font-size: small;
+  font-family:Arial, Helvetica, sans-serif;
+  border:2px solid;
+  border-radius:5px;
+  width:max-content;
 }
 

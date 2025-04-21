@@ -14,7 +14,7 @@ export default async function Trend(props) {
         <h4>Trending Animes</h4>
         </div>
         <div id="container">
-          {trend.map((index)=>{return( <Card key={index.iD} image={index.imgAni} name={index.name} rank={index.ranking} /> )})}
+          {trend.map((index)=>{return( <Card key={index.iD} id={index.iD} image={index.imgAni} name={index.name} rank={index.ranking} /> )})}
         </div>
         </div>
     </>

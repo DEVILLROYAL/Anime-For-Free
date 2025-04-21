@@ -4,7 +4,7 @@ export default async function Slider() {
   let res = await data.json();
   return (
     <>
-                  <div id="carouselExampleCaptions" className="carousel slide">
+                  <div id="carouselExampleCaptions" className="carousel slide bg-black">
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img src={res.slides[0].imageAnime} className="d-block w-100" alt={res.slides[0].animeId} />
