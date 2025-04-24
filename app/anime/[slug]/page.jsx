@@ -1,5 +1,6 @@
-import React from 'react'
+import TrailerPlayer from '@/components/TrailerPlayer';
 import AnimeDetail from './AnimeDetail';
+
 
 export default async function AnimePage({ params }) {
     const { slug } = await params;
@@ -8,23 +9,24 @@ export default async function AnimePage({ params }) {
     let res = await data.json();
     const animeData = await res.infoX;
 
+    const lnk = `https://api.jikan.moe/v4/anime?q=${slug}&limit=1`
+    const info = await fetch(lnk);
+    const cmData = await info.json();
+    const tlr = await cmData.data[0].trailer;
+    const titles = await cmData.data;
+    console.log(titles);
+
   return (
         <>
-           <div>
-               {animeData.map((item,index) => {return( <div key={item.id} >
-                <AnimeDetail
-                name={item.name} 
-                pg={item.pganime}
-                image={item.image}
-                quality={item.quality} 
-                sub={item.epsub} 
-                dub={item.epdub} 
-                totel={item.totelep} 
-                format={item.format} 
-                duration={item.duration}
-                desc={item.desc} 
-                /></div>)} )}
-           </div>
+               <div id="detail-border">
+                <div id="detail-player">
+                    {titles.map((item,index)=>{return(<AnimeDetail key={index} name={item.title_english} type={item.type} rating={item.rating} />)})}
+                    <div id="youtube-player">
+                       <TrailerPlayer url={tlr.embed_url} />
+                       <div id="black-filter"></div>
+                    </div>
+                    </div>
+                </div>
         </>
   )
 }
