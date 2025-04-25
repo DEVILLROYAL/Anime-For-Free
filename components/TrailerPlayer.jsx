@@ -12,8 +12,8 @@ export default function TrailerPlayer(props) {
       playing
       muted                       
       loop
-      height='600px'
-      width='900px'
+      height='550px'
+      width='950px'
       controls={false}                     
       config={{
         youtube: {
