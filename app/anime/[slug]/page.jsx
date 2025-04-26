@@ -1,5 +1,5 @@
 import TrailerPlayer from '@/components/TrailerPlayer';
-import AnimeDetail from './AnimeDetail';
+import AnimeDetail from '../../../components/AnimeDetail';
 import Episodes from '@/components/Episodes';
 
 
@@ -20,7 +20,6 @@ export default async function AnimePage({ params }) {
     const epData = await fetch(epUl);
     let epRes = await epData.json();
     const epList = await epRes.episodetown;
-    console.log(epList[0].epId);
 
   return (
         <>

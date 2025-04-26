@@ -1,4 +1,4 @@
-import SearchComponent from "./SearchComponent";
+import SearchComponent from "../../../components/SearchComponent";
 
 export default async function SearchPage({ params }) {
   const { slug } = await params;

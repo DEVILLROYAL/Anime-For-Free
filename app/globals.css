@@ -490,3 +490,18 @@ padding-bottom:20px;
   position: absolute;
   bottom: 0%;
 }
+#anime-border{
+}
+#animeplayer-border{
+  background:black;
+  border:2px solid white;
+  border-radius:10px;
+  margin:10px;
+}
+#source-border{
+  margin:10px;
+}
+#sources{
+  background: aqua;
+  position: absolute;
+}
