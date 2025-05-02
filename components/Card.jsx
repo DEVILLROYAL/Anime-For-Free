@@ -16,7 +16,7 @@ export default function Card(props) {
             <div id="card-title">
             <div id='trend-title' >{props.name}</div>
             </div>
-            <p id='card-rank'>{props.rank}</p>
+            {props.rank && <p id='card-rank'>{props.rank}</p> }
           </div>
     </>
   )

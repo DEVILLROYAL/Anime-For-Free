@@ -2,10 +2,10 @@ import Card from "./Card";
 
 export default async function Trend(props) {
 
-  const ul = 'https://aniwatch-api-v1-0.onrender.com/api/parse';
+  const ul = 'https://myanime-dun.vercel.app/aniwatch/';
   const data = await fetch(ul);
   let res = await data.json();
-  let trend = res.trend;
+  let trend = res.trendingAnimes;
 
   return (
     <>
@@ -14,7 +14,7 @@ export default async function Trend(props) {
         <h4>Trending Animes</h4>
         </div>
         <div id="container">
-          {trend.map((index)=>{return( <Card key={index.iD} id={index.iD} image={index.imgAni} name={index.name} rank={index.ranking} /> )})}
+          {trend.map((index)=>{return( <Card key={index.id} id={index.id} image={index.img} name={index.name} /> )})}
         </div>
         </div>
     </>

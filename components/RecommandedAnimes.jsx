@@ -1,13 +1,4 @@
-'use client'
-
-import { useRouter } from "next/navigation"
-
-export default function SearchComponent(props) {
-  
-  const router = useRouter();
-  const handleSelectClick = async (slug) => {
-    router.push(`/anime/${slug}`);
-  };
+export default function RecommandedAnimes(props) {
 
   return (
     <>
