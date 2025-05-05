@@ -40,10 +40,6 @@ a {
   html {
     color-scheme: dark;
   }
-}*{
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
 }
 #Navbar-border{
   height:75px;
@@ -129,7 +125,6 @@ input:-webkit-autofill{
       justify-content: space-between;
   }
   #search-border{
-      display: none;
 }
 }
 #slide-data{
@@ -148,9 +143,9 @@ input:-webkit-autofill{
 }
 #slide-title{
   display: flex;
-  border-left:5px solid red;
   justify-content: center;
   width: max-content;
+  font-size:xx-large;
   padding:10px;
   color: rgb(255, 255, 255);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -160,7 +155,6 @@ input:-webkit-autofill{
   justify-content: center;
   align-items: center;
   padding:10px;
-  border-left:5px solid;
   color: white;
 }
 #slide-quality{
@@ -236,39 +230,21 @@ input:-webkit-autofill{
 #libraury-border{
   height:auto;
   width:auto;
-  padding:10px;
   background:black;
   font-family: Arial, Helvetica, sans-serif;
 }
-#libraury-header{
+#libraury-title{
+  height: auto;
+  width:100%;
   display: flex;
   justify-content: space-between;
 }
-#libraury-title{
+#lib-child{
+  padding:10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width:max-content;
   color:white;
-  height:35px;
-  margin: 10px;
-  padding:10px;
-}
-#libraury-button button{
-  color:white;
-  display: flex;
-  background:black;
-  justify-content: center;
-  align-items: center;
-  border:0.5px solid;
-  padding:10px;
-  font-size:small;
-  width: max-content;
-  border-radius:5px;
-}
-#libraury-button:hover{
-  transform: scale(1.1);
-  transition-duration:2;
 }
 #container{
   overflow: auto;
@@ -280,9 +256,9 @@ input:-webkit-autofill{
   display: inline-block;
   width:200px;
   border-radius:10px;
-  margin:10px;
   height:300px;
   position: relative;
+  margin:10px;
 }
 #card-image{
   height:100%;
@@ -385,12 +361,10 @@ input:-webkit-autofill{
 #youtube-player{
   overflow: hidden;
   pointer-events: none;
-  height:auto;
+  height: auto;
   margin:25px;
   display: flex;
   flex-direction: row;
-  background:black;
-  position: absolute;
   scale:500px;
 }
 #detail-border{
@@ -399,29 +373,24 @@ input:-webkit-autofill{
   background:black;
 }
 #black-filter{
-  height:100%;
+  height:550px;
   width:100%;
   position: absolute;
-  top: 0%;
-  background-image:linear-gradient(to right, black,rgba(255, 255, 255, 0));;
+  background-image:linear-gradient(to right, black,rgba(255, 255, 255, 0));
 }
 #detail-player{
   height:600px;
-  width: auto;
   display: flex;
-  justify-content: end;
-  position: relative;
 }
 #animedetail-border{
   height:100%;
-  width:100%;
+  width:600px;
   padding:25px;
   display: flex;
   flex-direction: column;
 }
 
 #detail-title h1{
-  background: black;
   color: white;
   padding:10px;
   margin-top:100px;
@@ -489,11 +458,12 @@ padding-right:20px;
 padding-bottom:20px;
 }
 #detail-detail{
-  position: absolute;
-  bottom: 0%;
   display: flex;
   flex-direction: row-reverse;
   gap:10px;
+  justify-content: left;
+  position: absolute;
+  bottom:10%;
 }
 #episode-border{
   background-size: cover;
@@ -526,8 +496,6 @@ padding-bottom:20px;
   position: absolute;
   bottom: 0%;
 }
-#anime-border{
-}
 #animeplayer-border{
   background:black;
   border:2px solid white;
@@ -540,4 +508,100 @@ padding-bottom:20px;
 #sources{
   background: aqua;
   position: absolute;
+}
+#libraury-title-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:max-content;
+  color:white;
+  height:35px;
+  margin: 10px;
+  padding:10px;
+}
+@media only screen and (max-width: 600px) {
+  #slide-data{
+  }
+ #slide-title{
+  border:none;
+  font-size: small;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+ #slide-des{
+  display:none;
+ }
+ #slide-spotlight{
+  display: none;
+ }
+ #slide-quality{
+  font-size: x-small;
+  height:20px;
+ }
+ #slide-format{
+  font-size: x-small;
+  height:20px;
+ }
+ #slide-release{
+  font-size: x-small;
+  height:20px;
+ }
+ #detail-player{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+ }
+ #youtube-player{
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:-300px;
+ }
+ #black-filter{
+  display: none;
+ }
+ #animedetail-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0%;
+  width:100%;
+  height:min-content;
+  padding: 0%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.944), rgb(0, 0, 0))
+ }
+ #detail-title h1{
+  margin: 0%;
+  background:transparent;
+ }
+ #detail-rating p{
+  font-size: x-small;
+  margin: 0%;
+  background:rgba(0, 0, 0, 0.448);
+ }
+ #detail-detail{
+  position: relative;
+  display: flex;
+  justify-content: left;
+ }
+}
+#button-border button{
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  border-radius:5px;
+  background:none;
+  color:white;
+  border:none;
+}
+#button-border button:hover{
+  border:1px solid white;
 }

@@ -1,4 +1,5 @@
 import Card from "./Card"
+import Slidebtn from "./Slidebtn";
 
 export default async function LatestEpisodes() {
 
@@ -11,8 +12,13 @@ export default async function LatestEpisodes() {
     <>
               <div id="libraury-border">
               <div id="libraury-title" >
+              <div id='lib-child' >
                 <h4>Latest Episodes</h4>
                 </div>
+                <div id='lib-child'>
+                  <Slidebtn view='latestEpisodes' />
+                  </div>
+                  </div>
                 <div id="container">
                   {latestEpisodes.map((index)=>{return( <Card key={index.id} id={index.id} image={index.img} name={index.name} /> )})}
                 </div>

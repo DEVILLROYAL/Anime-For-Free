@@ -16,8 +16,9 @@ export default function SearchComponent(props) {
             <div id="card-title">
             <div id='trend-title' >{props.name}</div>
             </div>
-            <p id='card-duration'>{props.format}</p>
-            {props.pg !== false && (<p id='card-pg'>{props.pg}</p>)}
+            {props.format && 
+            <p id='card-duration'>{props.format}</p> }
+            {props.pg && (<p id='card-pg'>{props.pg}</p>)}
           </div>
     </>
   )

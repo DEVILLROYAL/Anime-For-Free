@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Slidebtn from "./Slidebtn";
 
 export default async function LatestCompleted() {
 
@@ -11,7 +12,12 @@ export default async function LatestCompleted() {
     <>
             <div id="libraury-border">
               <div id="libraury-title" >
+              <div id='lib-child' >
                 <h4>Trending Animes</h4>
+                </div>
+                <div id='lib-child'>
+                  <Slidebtn view='featuredAnimes.latestCompletedAnimes' />
+                </div>
                 </div>
                 <div id="container">
                   {lcAnime.map((index)=>{return( <Card key={index.id} id={index.id} image={index.img} name={index.name} /> )})}

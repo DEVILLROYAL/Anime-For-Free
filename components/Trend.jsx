@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Slidebtn from "./Slidebtn";
 
 export default async function Trend(props) {
 
@@ -11,7 +12,12 @@ export default async function Trend(props) {
     <>
       <div id="libraury-border">
       <div id="libraury-title" >
+        <div id='lib-child'>
         <h4>Trending Animes</h4>
+        </div>
+        <div id="lib-child">
+        <Slidebtn view='trendingAnimes' />
+        </div>
         </div>
         <div id="container">
           {trend.map((index)=>{return( <Card key={index.id} id={index.id} image={index.img} name={index.name} /> )})}

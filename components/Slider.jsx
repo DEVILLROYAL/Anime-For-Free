@@ -1,144 +1,148 @@
+import Slidebtn from "./Slidebtn";
+
 export default async function Slider() {
-  const url = 'https://aniwatch-api-v1-0.onrender.com/api/parse';
+  const url = 'https://myanime-dun.vercel.app/aniwatch/';
   const data = await fetch(url);
   let res = await data.json();
+  const slider = await res.spotLightAnimes;
+
   return (
     <>
                   <div id="carouselExampleCaptions" className="carousel slide bg-black">
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src={res.slides[0].imageAnime} className="d-block w-100" alt={res.slides[0].animeId} />
+                  <img src={slider[0].img} className="d-block w-100" alt={slider[0].id} />
                   <div className="container" id="slide-data" > 
-                  <div id="slide-release" >{res.slides[0].release}</div>  
+                  <div id="slide-release" >{slider[0].releasedDay}</div>  
                     <div id="spot-quality"> 
                     <div id="quality-container">
-                  <div id='slide-quality'>{res.slides[0].quality}</div>
-                  <div id="slide-format" >{res.slides[0].format}</div>
+                  <div id='slide-quality'>{slider[0].quality}</div>
+                  <div id="slide-format" >{slider[0].category}</div>
                   </div>
                   </div>   
                   <div id="spot-details"> 
-                  <div id="slide-spotlight" >{res.slides[0].spotlight}</div>               
-                  <div id="slide-title" ><h4>{res.slides[0].name}</h4></div>
-                    <div id="slide-des" ><p>{res.slides[0].anidesc}</p></div>
+                  <div id="slide-spotlight" >Spootlight {slider[0].rank}</div>               
+                  <div id="slide-title" ><h4>{slider[0].name}</h4></div>
+                    <div id="slide-des" ><p>{slider[0].description}</p></div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                   <img src={res.slides[1].imageAnime} className="d-block w-100" alt={res.slides[1].animeId} />
+                   <img src={slider[1].img} className="d-block w-100" alt={slider[1].id} />
                   <div className="container" id="slide-data" > 
-                  <div id="slide-release" >{res.slides[1].release}</div>  
+                  <div id="slide-release" >{slider[1].releasedDay}</div>  
                     <div id="spot-quality"> 
                     <div id="quality-container">
-                  <div id='slide-quality'>{res.slides[1].quality}</div>
-                  <div id="slide-format" >{res.slides[1].format}</div>
+                  <div id='slide-quality'>{slider[1].quality}</div>
+                  <div id="slide-format" >{slider[1].category}</div>
                   </div>
                   </div>   
                   <div id="spot-details"> 
-                  <div id="slide-spotlight" >{res.slides[1].spotlight}</div>               
-                  <div id="slide-title" ><h4>{res.slides[1].name}</h4></div>
-                    <div id="slide-des" ><p>{res.slides[1].anidesc}</p></div>
+                  <div id="slide-spotlight" >Spootlight {slider[1].rank}</div>               
+                  <div id="slide-title" ><h4>{slider[1].name}</h4></div>
+                    <div id="slide-des" ><p>{slider[1].description}</p></div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[2].imageAnime} className="d-block w-100" alt={res.slides[2].animeId} />
+                <img src={slider[2].img} className="d-block w-100" alt={slider[2].id} />
                   <div className="container" id="slide-data" > 
-                  <div id="slide-release" >{res.slides[2].release}</div>  
+                  <div id="slide-release" >{slider[2].releasedDay}</div>  
                     <div id="spot-quality"> 
                     <div id="quality-container">
-                  <div id='slide-quality'>{res.slides[2].quality}</div>
-                  <div id="slide-format" >{res.slides[2].format}</div>
+                  <div id='slide-quality'>{slider[2].quality}</div>
+                  <div id="slide-format" >{slider[2].category}</div>
                   </div>
                   </div>   
                   <div id="spot-details"> 
-                  <div id="slide-spotlight" >{res.slides[2].spotlight}</div>               
-                  <div id="slide-title" ><h4>{res.slides[2].name}</h4></div>
-                    <div id="slide-des" ><p>{res.slides[2].anidesc}</p></div>
+                  <div id="slide-spotlight" >Spootlight {slider[2].rank}</div>               
+                  <div id="slide-title" ><h4>{slider[2].name}</h4></div>
+                    <div id="slide-des" ><p>{slider[2].description}</p></div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[3].imageAnime} className="d-block w-100" alt={res.slides[3].animeId} />
+                <img src={slider[3].img} className="d-block w-100" alt={slider[3].id} />
                   <div className="container" id="slide-data" > 
-                  <div id="slide-release" >{res.slides[3].release}</div>  
+                  <div id="slide-release" >{slider[3].releasedDay}</div>  
                     <div id="spot-quality"> 
                     <div id="quality-container">
-                  <div id='slide-quality'>{res.slides[3].quality}</div>
-                  <div id="slide-format" >{res.slides[3].format}</div>
+                  <div id='slide-quality'>{slider[3].quality}</div>
+                  <div id="slide-format" >{slider[3].category}</div>
                   </div>
                   </div>   
                   <div id="spot-details"> 
-                  <div id="slide-spotlight" >{res.slides[3].spotlight}</div>               
-                  <div id="slide-title" ><h4>{res.slides[3].name}</h4></div>
-                    <div id="slide-des" ><p>{res.slides[3].anidesc}</p></div>
+                  <div id="slide-spotlight" >Spootlight {slider[3].rank}</div>               
+                  <div id="slide-title" ><h4>{slider[3].name}</h4></div>
+                    <div id="slide-des" ><p>{slider[3].description}</p></div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[4].imageAnime} className="d-block w-100" alt={res.slides[4].animeId} />
+                <img src={slider[4].img} className="d-block w-100" alt={slider[4].id} />
                   <div className="container" id="slide-data" > 
-                  <div id="slide-release" >{res.slides[4].release}</div>  
+                  <div id="slide-release" >{slider[4].releasedDay}</div>  
                     <div id="spot-quality"> 
                     <div id="quality-container">
-                  <div id='slide-quality'>{res.slides[4].quality}</div>
-                  <div id="slide-format" >{res.slides[4].format}</div>
+                  <div id='slide-quality'>{slider[4].quality}</div>
+                  <div id="slide-format" >{slider[4].category}</div>
                   </div>
                   </div>   
                   <div id="spot-details"> 
-                  <div id="slide-spotlight" >{res.slides[4].spotlight}</div>               
-                  <div id="slide-title" ><h4>{res.slides[4].name}</h4></div>
-                    <div id="slide-des" ><p>{res.slides[4].anidesc}</p></div>
+                  <div id="slide-spotlight" >Spootlight {slider[4].rank}</div>               
+                  <div id="slide-title" ><h4>{slider[4].name}</h4></div>
+                    <div id="slide-des" ><p>{slider[4].description}</p></div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[5].imageAnime} className="d-block w-100" alt={res.slides[5].animeId} />
+                <img src={slider[5].img} className="d-block w-100" alt={slider[5].id} />
                   <div className="container" id="slide-data" > 
-                  <div id="slide-release" >{res.slides[5].release}</div>  
+                  <div id="slide-release" >{slider[5].releasedDay}</div>  
                     <div id="spot-quality"> 
                     <div id="quality-container">
-                  <div id='slide-quality'>{res.slides[5].quality}</div>
-                  <div id="slide-format" >{res.slides[5].format}</div>
+                  <div id='slide-quality'>{slider[5].quality}</div>
+                  <div id="slide-format" >{slider[5].category}</div>
                   </div>
                   </div>   
                   <div id="spot-details"> 
-                  <div id="slide-spotlight" >{res.slides[5].spotlight}</div>               
-                  <div id="slide-title" ><h4>{res.slides[5].name}</h4></div>
-                    <div id="slide-des" ><p>{res.slides[5].anidesc}</p></div>
+                  <div id="slide-spotlight" >Spootlight {slider[5].rank}</div>               
+                  <div id="slide-title" ><h4>{slider[5].name}</h4></div>
+                    <div id="slide-des" ><p>{slider[5].description}</p></div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[6].imageAnime} className="d-block w-100" alt={res.slides[6].animeId} />
+                <img src={slider[6].img} className="d-block w-100" alt={slider[6].id} />
                   <div className="container" id="slide-data" > 
-                  <div id="slide-release" >{res.slides[6].release}</div>  
+                  <div id="slide-release" >{slider[6].releasedDay}</div>  
                     <div id="spot-quality"> 
                     <div id="quality-container">
-                  <div id='slide-quality'>{res.slides[6].quality}</div>
-                  <div id="slide-format" >{res.slides[6].format}</div>
+                  <div id='slide-quality'>{slider[6].quality}</div>
+                  <div id="slide-format" >{slider[6].category}</div>
                   </div>
                   </div>   
                   <div id="spot-details"> 
-                  <div id="slide-spotlight" >{res.slides[6].spotlight}</div>               
-                  <div id="slide-title" ><h4>{res.slides[6].name}</h4></div>
-                    <div id="slide-des" ><p>{res.slides[6].anidesc}</p></div>
+                  <div id="slide-spotlight" >Spootlight {slider[6].rank}</div>               
+                  <div id="slide-title" ><h4>{slider[6].name}</h4></div>
+                    <div id="slide-des" ><p>{slider[6].description}</p></div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
-                <img src={res.slides[7].imageAnime} className="d-block w-100" alt={res.slides[7].animeId} />
+                <img src={slider[7].img} className="d-block w-100" alt={slider[7].id} />
                   <div className="container" id="slide-data" > 
-                  <div id="slide-release" >{res.slides[7].release}</div>  
+                  <div id="slide-release" >{slider[7].releasedDay}</div>  
                     <div id="spot-quality"> 
                     <div id="quality-container">
-                  <div id='slide-quality'>{res.slides[7].quality}</div>
-                  <div id="slide-format" >{res.slides[7].format}</div>
+                  <div id='slide-quality'>{slider[7].quality}</div>
+                  <div id="slide-format" >{slider[7].category}</div>
                   </div>
                   </div>   
                   <div id="spot-details"> 
-                  <div id="slide-spotlight" >{res.slides[7].spotlight}</div>               
-                  <div id="slide-title" ><h4>{res.slides[7].name}</h4></div>
-                    <div id="slide-des" ><p>{res.slides[7].anidesc}</p></div>
+                  <div id="slide-spotlight" >Spootlight {slider[7].rank}</div>               
+                  <div id="slide-title" ><h4>{slider[7].name}</h4></div>
+                    <div id="slide-des" ><p>{slider[7].description}</p></div>
                     </div>
                   </div>
                 </div>

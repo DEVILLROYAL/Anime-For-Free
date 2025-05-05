@@ -16,11 +16,6 @@ export default async function AnimePage({ params }) {
     const tlr = await cmData.data[0].trailer;
     const titles = await cmData.data;
 
-    const epUl = `https://myanime-dun.vercel.app/aniwatch/episodes/${animeData[0]?.id}`;
-    const epData = await fetch(epUl);
-    let epRes = await epData.json();
-    const epList = await epRes.episodes;
-
   return (
         <>
                <div id="detail-border">
@@ -31,19 +26,19 @@ export default async function AnimePage({ params }) {
                        <div id="black-filter"></div>
                     </div>
                     </div>
-                <div id="detail-desc">
+                <div id="detail-desc"> 
                 <p>{titles[0]?.synopsis}</p>
-                </div>        
+                </div>
                 <div id="libraury-title" >
+                  <div id='lib-child'>
                   <h4>Episode List</h4>
+                  </div>
                   </div>
                   <div className="container" id="search-result-control" >
                   <div className="row" id='search-result'>
-                    {epList.map((item, index)=>{return(<div className='col my-1 mx-1'id="search-col" key={item.episodeId} >
-                      <Episodes name={item.name} order={item.episodeNo} episode={item.episodeId} image={animeData[0].image} />
-                    </div>)})}
                  </div>
                  </div>
+
                 </div>
         </>
   )

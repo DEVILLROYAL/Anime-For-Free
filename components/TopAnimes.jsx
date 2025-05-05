@@ -1,25 +1,51 @@
 import Card from "./Card"
+import Slidebtn from "./Slidebtn";
 
 export default async function TopAnimes() {
 
     const ul = 'https://myanime-dun.vercel.app/aniwatch/';
     const data = await fetch(ul);
     let res = await data.json(); 
-    const topTen = await res.top10Animes.day;
+    const topDay = await res.top10Animes.day;
+    const topWeek = await res.top10Animes.week;
+    const topMonth = await res.top10Animes.month;
 
   return (
     <>
              <div id="libraury-border">
                 <div id="libraury-header">
-             <div id="libraury-title" >
+             <div id="libraury-title">
+              <div id='lib-child'>
                <h4>Top 10 Animes</h4>
                </div>
-               <div id="libraury-button" >
-               <button>Day</button>
+                 <div id='lib-child'>
+                     <Slidebtn view='top10Animes.day' />
+                    </div>
+                 </div>
+               </div>
+               <div id="libraury-title">
+                <div id='lib-child'>
+               <h4>Day</h4>
                </div>
                </div>
                <div id="container">
-                 {topTen.map((item, index)=>{return( <Card key={item.id} id={item.id} image={item.img} name={item.name} rank={item.rank} /> )})}
+                 {topDay.map((item, index)=>{return( <Card key={item.id} id={item.id} image={item.img} name={item.name} rank={item.rank} /> )})}
+               </div>
+               <div id="libraury-title" >
+                <div id="lib-child">
+               <h4>Week</h4>
+               </div>
+               </div>
+               <div id="container">
+                 {topWeek.map((item, index)=>{return( <Card key={item.id} id={item.id} image={item.img} name={item.name} rank={item.rank} /> )})}
+               </div>
+               <div id="libraury-title">
+               <div id="lib-child">
+               <h4>Month</h4>
+               </div>
+               </div>
+               <div id="container">
+                 {topMonth.map((item, index)=>{return( <Card key={item.id} id={item.id} image={item.img} name={item.name} rank={item.rank} /> )})}
                </div>
                </div>
     </>
