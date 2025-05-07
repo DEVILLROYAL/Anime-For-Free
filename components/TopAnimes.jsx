@@ -24,25 +24,31 @@ export default async function TopAnimes() {
                  </div>
                </div>
                <div id="libraury-title">
+                {topDay.length !== 0 && 
                 <div id='lib-child'>
                <h4>Day</h4>
                </div>
+                 }
                </div>
                <div id="container">
                  {topDay.map((item, index)=>{return( <Card key={item.id} id={item.id} image={item.img} name={item.name} rank={item.rank} /> )})}
                </div>
                <div id="libraury-title" >
+                {topWeek.length !== 0 &&
                 <div id="lib-child">
                <h4>Week</h4>
                </div>
+                }
                </div>
                <div id="container">
                  {topWeek.map((item, index)=>{return( <Card key={item.id} id={item.id} image={item.img} name={item.name} rank={item.rank} /> )})}
                </div>
                <div id="libraury-title">
+               {topMonth.length !== 0 &&
                <div id="lib-child">
                <h4>Month</h4>
                </div>
+                 }
                </div>
                <div id="container">
                  {topMonth.map((item, index)=>{return( <Card key={item.id} id={item.id} image={item.img} name={item.name} rank={item.rank} /> )})}

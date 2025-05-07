@@ -124,8 +124,6 @@ input:-webkit-autofill{
       gap:20px;
       justify-content: space-between;
   }
-  #search-border{
-}
 }
 #slide-data{
   position:absolute;
@@ -590,6 +588,16 @@ padding-bottom:20px;
   display: flex;
   justify-content: left;
  }
+ #trailerImage-border{
+  background:white;
+  border:2px solid white;
+  width:100%;
+  position:relative;
+  top:0%;
+ }
+ #trailerImage{
+  width:100%;
+ }
 }
 #button-border button{
   width: max-content;
@@ -604,4 +612,16 @@ padding-bottom:20px;
 }
 #button-border button:hover{
   border:1px solid white;
+}
+#trailerImage-border{
+  height: auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background:black;
+  display: flex;
+  justify-content: end;
+}
+#trailerImage{
+  height:100%;
 }
