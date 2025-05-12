@@ -1,12 +1,11 @@
-import Card from "./Card";
+import YouCard from "./YouCard";
 import Slidebtn from "./Slidebtn";
 
-export default async function Trend(props) {
+export default async function YouList(props) {
 
-  const ul = 'http://localhost:3000/hindi-dub-anime';
+  const ul = 'https://youtubeapi-tmc9.onrender.com/api/home';
   const data = await fetch(ul);
   let res = await data.json();
-  console.log(res);
 
   return (
     <>
@@ -20,7 +19,7 @@ export default async function Trend(props) {
         </div>
         </div>
         <div id="container">
-          {res.map((item, index)=>{return( <Card key={item.playlistId} id={item.playlistId} image={index.image} name={index.youtubeTitle} /> )})}
+          {res.map((item, index)=>{return( <YouCard key={item.playlistId} id={item.engTitle ?? item.animeTitle} playlist={item.playlistId} image={item.image} name={item.engTitle ?? item.animeTitle} /> )})}
         </div>
         </div>
     </>

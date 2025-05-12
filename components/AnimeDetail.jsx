@@ -5,7 +5,7 @@ export default function AnimeDetail(props) {
     <>
        <div id="animedetail-border">
         <div id="detail-rating">
-          {props.pg && 
+          {props.rating && 
         <p>{props.rating}</p>
           }
         </div>

@@ -4,6 +4,8 @@ import Slider from "@/components/Slider";
 import TopAnimes from "@/components/TopAnimes";
 import Trend from "@/components/Trend";
 import UpcomingAnime from "@/components/UpcomingAnime";
+import WatchPage from "@/components/WatchPage";
+import YouList from "@/components/YouList";
 
 export default async function Home() {
 
@@ -15,6 +17,8 @@ export default async function Home() {
          <TopAnimes/>
          <LatestCompleted/>
          <UpcomingAnime/>
+         <YouList/>
+         <WatchPage/>
     </>
   );
 }

@@ -2,11 +2,11 @@
 
 import { useRouter } from "next/navigation"
 
-export default function YouCard(props) {
+export default function Card(props) {
 
   const router = useRouter();
   const handleSelectClick = async (slug) => {
-    router.push(`/anime/${slug}`);
+    router.push(`/ytanime/${slug}`);
   };
 
   return (
