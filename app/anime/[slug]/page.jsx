@@ -17,7 +17,7 @@ export default async function AnimePage({ params }) {
         <>
                <div id="detail-border">
                 <div id="detail-player">
-                    {titles.map((item,index)=>{return(<AnimeDetail key={index} name={titles[0].title} duration={item.duration} episodes={item.episodes} type={item.type} rating={item.rating} />)})}
+                    {titles.map((item,index)=>{return(<AnimeDetail key={index} name={titles[0].title_english ?? titles[0].title} duration={item.duration} episodes={item.episodes} type={item.type} rating={item.rating} />)})}
                     {tlr.embed_url === null ? <div id="trailerImg-border">
                       <img src={tlrImage.large_image_url} id='trailerImage' />
                       <div  id='trailerImage-2'></div>

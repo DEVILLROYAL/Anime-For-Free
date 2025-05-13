@@ -19,7 +19,7 @@ export default async function YouList(props) {
         </div>
         </div>
         <div id="container">
-          {res.map((item, index)=>{return( <YouCard key={item.playlistId} id={item.engTitle ?? item.animeTitle} playlist={item.playlistId} image={item.image} name={item.engTitle ?? item.animeTitle} /> )})}
+          {res.map((item, index)=>{return( <YouCard key={item.playlistId} id={item.playlistId} image={item.image} name={item.engTitle ?? item.animeTitle} /> )})}
         </div>
         </div>
     </>
