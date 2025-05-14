@@ -1,6 +1,5 @@
 import TrailerPlayer from '@/components/TrailerPlayer';
 import AnimeDetail from '../../../components/AnimeDetail';
-import Episodes from '@/components/Episodes';
 
 
 export default async function AnimePage({ params }) {
