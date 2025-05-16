@@ -1,5 +1,5 @@
-import TrailerPlayer from '@/components/TrailerPlayer';
-import AnimeDetail from '../../../components/AnimeDetail';
+import TrailerPlayer from '@/components/Video/TrailerPlayer';
+import AnimeDetail from '../../../components/Cards/AnimeDetail';
 
 
 export default async function AnimePage({ params }) {

@@ -1,4 +1,4 @@
-import Slidebtn from "./Slidebtn";
+import Slidebtn from "../Buttons/Slidebtn";
 
 export default async function Slider() {
   const url = 'https://myanime-dun.vercel.app/aniwatch/';

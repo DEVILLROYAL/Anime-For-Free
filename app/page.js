@@ -1,9 +1,9 @@
-import LatestCompleted from "@/components/LatestCompleted";
-import LatestEpisodes from "@/components/LatestEpisodes";
-import Slider from "@/components/Slider";
-import TopAnimes from "@/components/TopAnimes";
-import Trend from "@/components/Trend";
-import UpcomingAnime from "@/components/UpcomingAnime";
+import LatestCompleted from "@/components/Home/LatestCompleted";
+import LatestEpisodes from "@/components/Home/LatestEpisodes";
+import Slider from "@/components/Home/Slider";
+import TopAnimes from "@/components/Home/TopAnimes";
+import Trend from "@/components/Home/Trend";
+import UpcomingAnime from "@/components/Home/UpcomingAnime";
 import YouList from "@/components/YouList";
 
 export default async function Home() {

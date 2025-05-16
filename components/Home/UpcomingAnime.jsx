@@ -1,5 +1,5 @@
-import Card from "./Card";
-import Slidebtn from "./Slidebtn";
+import Card from "../Cards/Card";
+import Slidebtn from "../Buttons/Slidebtn";
 
 export default async function UpcomingAnime(props) {
 

@@ -1,5 +1,4 @@
-import React from 'react'
-import WatchButton from './WatchButton'
+import StreamButton from "../Buttons/StreamButton";
 
 export default function AnimeDetail(props) {
   return (
@@ -13,7 +12,7 @@ export default function AnimeDetail(props) {
         <div id="detail-title">
         <h1>{props.name}</h1>
         </div>
-        <WatchButton id={props.id} />
+        <StreamButton id={props.id} />
         <div id="detail-detail">
         <div id="detail-type">
         <h4>{props.type}</h4>

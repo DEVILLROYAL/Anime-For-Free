@@ -1,7 +1,7 @@
-import YouCard from "./YouCard";
-import Slidebtn from "./Slidebtn";
+import YouCard from "./Cards/YouCard";
+import Slidebtn from "./Buttons/Slidebtn";
 
-export default async function YouList(props) {
+export default async function YouList() {
 
   const ul = 'https://youtubeapi-tmc9.onrender.com/api/home';
   const data = await fetch(ul);
