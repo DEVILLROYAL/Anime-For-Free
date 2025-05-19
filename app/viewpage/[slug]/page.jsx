@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchComponent from '@/components/SearchComponent';
 
-export default async function page({ params }) {
+export default async function StreamPage({ params }) {
 
     const { slug } = await params;
 
