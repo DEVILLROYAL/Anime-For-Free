@@ -6,12 +6,13 @@ export default function StreamButton(props) {
     const router = useRouter();
 
     const handleSelectClick = async (slug) => {
-        router.push(`/stream/${slug}`);
+        router.push(`/stream/${encodeURIComponent(slug)}`);
     };
+    
   return (
     <>
        <div id="watchButton-border">
-        <button type="button" onClick={()=>handleSelectClick(props.id)} > Watch Now </button>
+        <button type="button" id="watch-btn" onClick={()=>handleSelectClick(props.epId)} > Watch Now </button>
        </div>
     </>
   )

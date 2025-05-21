@@ -588,13 +588,23 @@ padding-bottom:20px;
  #detail-detail{
   position: relative;
   display: flex;
-  justify-content: left;
+  height:35px;
+  margin:5px;
+  justify-content: center;
  }
  #trailerImage-2{
   display:none;
  }
  #trailerImage{
   border-radius:25px;
+ }
+ #watchButton-border #watch-btn{
+  font-size: x-small;
+  height:35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
  }
 }
 #button-border button{
@@ -703,6 +713,22 @@ padding-bottom:20px;
   border-radius:10px;
 }
 #stream-p-border{
+  height:auto;
+  max-width:750px;
+  margin:25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:25px;
+  overflow: hidden;
+}
+#stream-b{
+  border:5px solid red;
+  display: flex;
+  justify-content: center;
+}
+#stream-detail-b{
+  max-width:100%;
   border:2px solid red;
-  background: black;
+  margin:25px;
 }

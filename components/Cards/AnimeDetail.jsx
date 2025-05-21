@@ -12,7 +12,7 @@ export default function AnimeDetail(props) {
         <div id="detail-title">
         <h1>{props.name}</h1>
         </div>
-        <StreamButton id={props.url} />
+        <StreamButton epId={props.epId} />
         <div id="detail-detail">
         <div id="detail-type">
         <h4>{props.type}</h4>

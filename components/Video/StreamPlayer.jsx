@@ -16,7 +16,7 @@ export default function StreamPlayer(props) {
       <ReactPlayer
         url={`https://the-stream-proxy.vercel.app/m3u8-proxy?url=${props.url}`}
         controls
-        onReady={() => setIsLoading(false)}
+        onReady={() => setIsLoading(false)} 
         onError={(e) => {
           console.error('Player error:', e);
           setHasError(true);

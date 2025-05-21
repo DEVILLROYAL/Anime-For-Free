@@ -9,12 +9,12 @@ export default async function StreamPage({ params }) {
   const data = await fetch(ul);
   const res = await data.json();
   const stream = await res?.data?.sources[0].url;
-  console.log(res);
+  console.log(decodeURIComponent(slug));
 
   return (
-    <div>
+    <div id='stream-b'>
+      <div id="stream-detail-b"></div>
       <StreamPlayer url={stream}/>
-      <Server/>
     </div>
   );
 }
