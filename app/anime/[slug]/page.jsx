@@ -49,7 +49,7 @@ export default async function AnimePage({ params }) {
                     <div className="contailer" id="search-result-control" >
                       <div className="row" id="search-result" >
                         {epData?.episodes.map((item, index)=>{return(<div className="col my-1 mx-1" id='search-col' key={index} >
-                          <Episodes episodeId={item.episodeId} name={item.title} url={tlrImage.large_image_url} order={item.number} /></div>)})}
+                          <Episodes epId={item.episodeId} name={item.title} url={tlrImage.large_image_url} order={item.number} /></div>)})}
                       </div>
                     </div>
                   </div>
