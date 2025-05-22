@@ -9,12 +9,31 @@ export default async function StreamPage({ params }) {
   const data = await fetch(ul);
   const res = await data.json();
   const stream = await res?.data?.sources[0].url;
-  console.log(decodeURIComponent(slug));
+
+  const jikanUl = `https://api.jikan.moe/v4/anime/${res.data.malID}`;
+  const jikanData = await fetch(jikanUl);
+  const jikanRes = await jikanData.json();
+  console.log(jikanRes.data.title_english);
 
   return (
-    <div id='stream-b'>
-      <div id="stream-detail-b"></div>
-      <StreamPlayer url={stream}/>
-    </div>
+    <>
+        <div id="stream-p-main">
+          <div id="stream-p">
+            <div id="t-stream">
+              <div id="stream-b">
+                <StreamPlayer url={stream} />
+              </div>
+              <div id="stream-controls"></div>
+            </div>
+            <div id="t-detail">
+              <div id="detail-b">
+                <div id="p-title">
+                  <p>{jikanRes.data.title_english}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </>
   );
 }

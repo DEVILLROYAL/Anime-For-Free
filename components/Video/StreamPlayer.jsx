@@ -24,7 +24,7 @@ export default function StreamPlayer(props) {
         }}
         width="100%"
         height="100%"
-      />
+        />
     </div>
   );
 }
